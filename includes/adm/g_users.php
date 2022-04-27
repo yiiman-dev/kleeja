@@ -242,11 +242,12 @@ elseif (ip('newuser'))
         $mail                 = (string) trim(strtolower(p('lmail')));
         $clean_name           = (string) $usrcp->cleanusername($name);
         $group                = (int) p('lgroup');
+        $numbers              = (string) p('phonenumber');
 
         $insert_query    = [
-            'INSERT'       => 'name ,password, password_salt ,group_id, mail,founder, session_id, clean_name',
+            'INSERT'       => 'name ,password, password_salt ,group_id, mail,founder, session_id, clean_name, numbers',
             'INTO'         => "{$dbprefix}users",
-            'VALUES'       => "'$name', '$pass', '$user_salt', $group , '$mail', 0 , '', '$clean_name'"
+            'VALUES'       => "'$name', '$pass', '$user_salt', $group , '$mail', 0 , '', '$clean_name', '$numbers'"
         ];
 
         if ($SQL->build($insert_query))
@@ -299,7 +300,7 @@ if (ip('edituser'))
     }
 
     $query = [
-        'SELECT'       => 'name, mail, clean_name, group_id, founder, show_my_filecp',
+        'SELECT'       => 'name, mail, clean_name, group_id, founder, show_my_filecp, numbers',
         'FROM'         => "{$dbprefix}users",
         'WHERE'        => 'id=' . $userid,
     ];
@@ -356,6 +357,7 @@ if (ip('edituser'))
     //no errors, lets do process
     if (empty($ERRORS))
     {
+        $numbers=str_replace('&quot;',"\"",p('phonenumber'));
         $update_query    = [
             'UPDATE'       => "{$dbprefix}users",
             'SET'          => ($new_name ? "name = '" . $SQL->escape(p('l_name')) . "', clean_name='" . $SQL->escape($new_clean_name) . "', " : '') .
@@ -363,7 +365,7 @@ if (ip('edituser'))
                             $pass .
                             (ip('l_founder') ? 'founder=' . p('l_founder', 'int') . ',' : '') .
                             'group_id=' . p('l_group', 'int') . ',' .
-                            'show_my_filecp=' . p('l_show_filecp', 'int'),
+                            'show_my_filecp=' . p('l_show_filecp', 'int').' , numbers= \''.$numbers.'\'',
             'WHERE'        => 'id=' . $userid
         ];
 
@@ -1182,7 +1184,7 @@ case 'edit_user':
     }
 
     $query = [
-        'SELECT'       => 'name, mail, group_id, founder, show_my_filecp',
+        'SELECT'       => 'name, mail, group_id, founder, show_my_filecp , numbers',
         'FROM'         => "{$dbprefix}users",
         'WHERE'        => 'id=' . $userid,
     ];
@@ -1219,7 +1221,7 @@ case 'edit_user':
 
     $k_groups = array_keys($d_groups);
     $u_groups = [];
-
+    $u_numbers= p('u_numbers', 'str', !empty($udata['numbers'])?$udata['numbers']:'[]');
     foreach ($k_groups as $id)
     {
         $u_groups[] = [

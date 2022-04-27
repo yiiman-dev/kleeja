@@ -8,7 +8,7 @@ return [
 	//language information
 	'DIR' 					=> 'rtl',
 	'LANG_SMALL_NAME'		=> 'fa-ir',
-
+    'MESSAGE_TEXTAREA'           => 'متن پیام ارسالی به گروه',
 	'HOME' 					=> 'خانه',
 	'INDEX' 				=> 'صفحه اصلی',
 	'SITE_CLOSED' 			=> 'سایت بسته است',
@@ -182,7 +182,7 @@ return [
 	'SUBMIT' 				=> 'ارسال',
 	'EDIT' 					=> 'ویرایش',
 	'DISABLE' 					=> 'غیرفعال',
-	'ENABLE' 					=> 'فعال',	
+	'ENABLE' 					=> 'فعال',
 	'OPEN'						=> 'باز',
 	'NOTE'						=>	'توضیحات',
 	'WARN'						=>	'اخطار',
@@ -233,7 +233,7 @@ return [
 	'USERS'						=> 'کاربران',
 	'DELETE_INSTALL_FOLDER'		=> 'برای شروع کار با کلیجا لطفا پوشه "install" را حذف کنید.',
 	'HV_NOT_PRVLG_ACCESS'		=> 'شما اجازه دسترسی به این صفحه را ندارید.',
-	
+
 
 	'W_PERIODS_0'   => 'یک لحظه',
     'W_PERIODS_1'   => 'دقیق',
@@ -261,8 +261,8 @@ return [
     'W_PERIODS_P_5'   => 'ماه ها',
     'W_PERIODS_P_6'   => 'سال ها',
     'W_PERIODS_P_7'   => 'دهه ها',
-	
-	
+
+
 	'W_FROM' 			=> '',
 	'W_AGO' 			=> 'قبل',
 	'TIME_PM'			=> 'عصر',

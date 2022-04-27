@@ -342,7 +342,7 @@ if (
     ! (defined('IN_UCP') && in_array(g('go'), ['captcha', 'login']))
 ) {
     //Different message for admins! delete install folder
-    kleeja_info((user_can('enter_acp') ? $lang['DELETE_INSTALL_FOLDER'] : $lang['WE_UPDATING_KLEEJA_NOW']), $lang['SITE_CLOSED']);
+//    kleeja_info((user_can('enter_acp') ? $lang['DELETE_INSTALL_FOLDER'] : $lang['WE_UPDATING_KLEEJA_NOW']), $lang['SITE_CLOSED']);
 }
 
 

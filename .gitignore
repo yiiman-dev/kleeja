@@ -33,3 +33,6 @@ Project_Default.xml
 .htaccess
 .php_cs.cache
 kleeja.db
+
+/vendor/
+composer.lock

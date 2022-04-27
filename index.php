@@ -8,7 +8,7 @@
 */
 
 
-
+include_once __DIR__.'/vendor/autoload.php';
 /**
  * We are in index.php file, useful for exceptions
  */
@@ -202,7 +202,13 @@ if (ip('ajax'))
 
     exit;
 }
+// < Send messages >
+{
+    if (isset($uploader->total_uploaded_files) && $uploader->total_uploaded_files>0) {
 
+    }
+}
+// </ Send messages >
 
 //show style
 if ($show_style)

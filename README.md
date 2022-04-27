@@ -18,8 +18,12 @@ Trusted by thousands of webmasters since 2007.
 | --- |
 | 🔥 [Features & Highlights](https://github.com/kleeja-official/kleeja/wiki/Key-Features-&-Highlights-of-Kleeja) |
 | ⬇️ [Download](https://github.com/kleeja-official/kleeja/releases) |
-| 📚 [How-To/documentations](https://github.com/kleeja-official/kleeja/wiki) | 
+| 📚 [How-To/documentations](https://github.com/kleeja-official/kleeja/wiki) |
 | ⏰ [ChangeLog](https://github.com/kleeja-official/kleeja/blob/master/CHANGELOG.md) |
 | 🐞 [Report an issue/bug](https://github.com/kleeja-official/kleeja/issues) |
 | 🗣 [Chat Support - Discord](https://discord.gg/Mp3XVKP) |
 
+## Deployment
+Install composer before install script by this command:
+
+``composer install``
