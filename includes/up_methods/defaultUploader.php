@@ -32,7 +32,7 @@ class defaultUploader implements KleejaUploader
 
     protected $upload_fields_limit = 0;
 
-    protected $total_uploaded_files = 0;
+    public $total_uploaded_files = 0;
 
     /**
      * set the allowed extensions of uploaded files

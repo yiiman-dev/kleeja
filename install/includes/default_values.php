@@ -38,8 +38,9 @@ $config_values[] = ['register', '1', '<label>{lang.YES}<input type=\"radio\" id=
 $config_values[] = ['enable_userfile', '1', '<label>{lang.YES}<input type=\"radio\" id=\"enable_userfile\" name=\"enable_userfile\" value=\"1\"  <IF NAME=\"con.enable_userfile==1\"> checked=\"checked\"</IF> /></label>\r\n <label>{lang.NO}<input type=\"radio\" id=\"enable_userfile\" name=\"enable_userfile\" value=\"0\"  <IF NAME=\"con.enable_userfile==0\"> checked=\"checked\"</IF> /></label>', 11, 'groups', 0, 0];
 $config_values[] = ['mod_writer', '0', '<label>{lang.YES}<input type=\"radio\" id=\"mod_writer\" name=\"mod_writer\" value=\"1\"  <IF NAME=\"con.mod_writer==1\"> checked=\"checked\"</IF> /></label>\r\n <label>{lang.NO}<input type=\"radio\" id=\"mod_writer\" name=\"mod_writer\" value=\"0\"  <IF NAME=\"con.mod_writer==0\"> checked=\"checked\"</IF> /></label>\r\n   [ {lang.MOD_WRITER_EX} ]', 12, 'advanced', 0, 0];
 $config_values[] = ['WhatsAppToken', 'test', '<input type=\"text\" id=\"WhatsAppToken\" name=\"WhatsAppToken\" value=\"{con.WhatsAppToken}\" size=\"50\" />', 10, 'general', 0, 0];
-$config_values[] = ['SMSToken', 'test', '<input type=\"text\" id=\"SMSToken\" name=\"SMSToken\" value=\"{con.SMSToken}\" size=\"50\" />', 11, 'general', 0, 0];
-$config_values[] = ['SMSLine', '00000000', '<input type=\"text\" id=\"SMSLine\" name=\"SMSLine\" value=\"{con.SMSLine}\" size=\"50\" />', 12, 'general', 0, 0];
+$config_values[] = ['SMSPassword', 'test', '<input type=\"text\" id=\"SMSPassword\" name=\"SMSPassword\" value=\"{con.SMSPassword}\" size=\"50\" />', 11, 'general', 0, 0];
+$config_values[] = ['SMSUsername', 'test', '<input type=\"text\" id=\"SMSUsername\" name=\"SMSUsername\" value=\"{con.SMSUsername}\" size=\"50\" />', 12, 'general', 0, 0];
+$config_values[] = ['SMSLine', '00000000', '<input type=\"text\" id=\"SMSLine\" name=\"SMSLine\" value=\"{con.SMSLine}\" size=\"50\" />', 13, 'general', 0, 0];
 
 // Cookies settings
 $cookie_data     = get_cookies_settings();
